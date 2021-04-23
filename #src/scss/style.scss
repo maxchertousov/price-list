@@ -39,7 +39,7 @@ body{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 468px;
+    height: 100%;
   }
 }
 .block {
@@ -52,19 +52,20 @@ body{
     margin-bottom: 53px;
   }
   &__column {
+    ul:not(:first-child) {
+
+    }
     ul li:not(:first-child) {
         margin-top: 14px;
     }
-    flex: 0 1 50%;
-    &:first-child {
-      padding-right: 15px;
-    }
-    &:last-child {
-      padding-left: 15px;
-    }
+    flex: 0 1 100%;
+
   }
 }
 .item {
+  &__list {
+    column-count: 2;
+  }
   &__string {
     display: flex;
     justify-content: space-between;
